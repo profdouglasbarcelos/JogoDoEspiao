@@ -10,6 +10,11 @@ public class PlayerController : NetworkBehaviour {
     {
 		
 	}
+
+    public override void OnStartLocalPlayer()
+    {
+        GetComponent<MeshRenderer>().material.color = Color.blue;
+    }
 	
 	// Update is called once per frame
 	void Update () 
