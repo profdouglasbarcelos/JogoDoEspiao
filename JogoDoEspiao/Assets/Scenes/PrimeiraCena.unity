@@ -365,8 +365,8 @@ MonoBehaviour:
   m_PacketLossPercentage: 0
   m_MaxBufferedPackets: 16
   m_AllowFragmentation: 1
-  m_MatchHost: mm.unet.unity3d.com
-  m_MatchPort: 443
+  m_MatchHost: localhost
+  m_MatchPort: 7777
   matchName: default
   matchSize: 4
   isNetworkActive: 0
