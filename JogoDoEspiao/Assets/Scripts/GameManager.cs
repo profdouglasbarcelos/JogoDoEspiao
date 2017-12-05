@@ -7,15 +7,18 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static List<string> locais;
-    public string nomeJogador;
+    public static List<string> jogadores;
+
+    public string nomeJogadorLocal;
+
 
     public Button btnEntrar;
     public InputField txtNome;
 
     void TaskOnClick()
     {
-        nomeJogador = txtNome.text;
-        Debug.Log("You have clicked the button " + nomeJogador + ", Congrats!");
+        nomeJogadorLocal = txtNome.text;
+        Debug.Log("You have clicked the button " + nomeJogadorLocal + ", Congrats!");
         SceneManager.LoadScene("PrimeiraCena");
     }
 
@@ -29,6 +32,8 @@ public class GameManager : MonoBehaviour
     {
         Button btn = btnEntrar.GetComponent<Button>();
         btn.onClick.AddListener(TaskOnClick);
+
+        jogadores = new List<string>();
 
         locais = new List<string>()
         {
